@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MvcMusicStore.Models.Album>
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List</h1>
+
+<!-- Using models to render the view -->
+<!-- When accessing model, using capital M -->
+<h2>Album list:</h2>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Title</li>
+    }
+</ul>
+
+@*
+    @using MvcMusicStore.Models;
+    @{
+        ViewData["Title"] = "ListOne";
+    }
+
+    <h1>ListOne</h1>
+
+    <!--Using ViewBag to render data -->
+    <!-- Iterate through the ViewBag.Albums and output the data in an unordered list -->
+    <h2>Album List:</h2>
+    <ul>
+        @foreach (var item in (ViewBag.Albums as IEnumerable<Album>))
+        {
+            <li>@item.Title</li>
+        }
+    </ul>
+*@
