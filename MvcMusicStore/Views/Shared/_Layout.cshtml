@@ -28,6 +28,14 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Album" asp-action="Index">Album</a>
                         </li>
+                        <!--Using tag helper-->
+                        <li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Store" asp-action="Sample">Browse Store</a>
+                        </li>
+                        <!--Using HTML helper actionlink-->
+                        <li class="nav-link text-dark">@Html.ActionLink("Browse Store", "Sample", "Store")</li>
+
+
                     </ul>
                 </div>
             </div>
